@@ -118,6 +118,9 @@
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
     </include_path>
   </component>
   <component name="ProjectId" id="1r7cuGxVaKKetPLZV3Ar52LgR4S" />
@@ -145,11 +148,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618330800802</updated>
-      <workItem from="1618330804130" duration="583000" />
+      <workItem from="1618330804130" duration="3554000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618333762577">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618333762577" />
   </component>
 </project>
