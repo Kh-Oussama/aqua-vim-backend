@@ -60,7 +60,6 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-//        sleep(2);
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'password' => 'required|string|min:6',
@@ -84,8 +83,7 @@ class AuthController extends Controller
      */
     public function profile()
     {
-        sleep(5);
-        return response()->json(auth()->user());
+             return response()->json(auth()->user());
     }
 
     /**
@@ -106,7 +104,6 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        sleep(10);
         return $this->createNewToken(auth()->refresh());
     }
 
