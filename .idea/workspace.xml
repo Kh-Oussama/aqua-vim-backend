@@ -21,10 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7687b7b4-cb87-48d8-923e-6a695fb9fd45" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SliderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SliderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/slider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Slider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618330800802</updated>
       <workItem from="1618330804130" duration="18126000" />
-      <workItem from="1618493191014" duration="19172000" />
+      <workItem from="1618493191014" duration="29165000" />
     </task>
     <servers />
   </component>
@@ -197,17 +195,21 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618360450602">
+    <state x="333" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618790551617">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618360450602" />
+    <state x="333" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618790551617" />
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618794252824">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618794252824" />
     <state x="410" y="60" key="FileChooserDialogImpl" timestamp="1618409587003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="410" y="60" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618409587003" />
-    <state x="255" y="159" key="run.anything.popup" timestamp="1618695159092">
+    <state x="255" y="159" key="run.anything.popup" timestamp="1618787104157">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="255" y="159" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618695159092" />
+    <state x="255" y="159" key="run.anything.popup/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618787104157" />
   </component>
 </project>

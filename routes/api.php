@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ReferencesController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,6 @@ Route::group([
     Route::post("logout",[AuthController::class,'logout']);
     Route::post("refresh",[AuthController::class,'refresh']);
 });
+
 Route::resource('/sliders',SliderController::class);
+Route::resource('/references',ReferencesController::class);
