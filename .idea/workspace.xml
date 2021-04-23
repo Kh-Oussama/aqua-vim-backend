@@ -20,14 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7687b7b4-cb87-48d8-923e-6a695fb9fd45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/diffForHumans()" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sliders/3wIkNOoTuEcklEp1poPGRRlFxo1EVcmjxICIh2k4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sliders/nhmOpeKv6B1L5lVtSubppXZWQDusOH8kbZgAKKOn.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReferencesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReferencesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_18_181019_create_references_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_19_172106_create_references_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sliders/v6Ooc3oVwFSw33cqjD7QCC3qWTH6oQwFwxeh9xa9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +154,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Laravel-Api" />
@@ -188,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618330800802</updated>
       <workItem from="1618330804130" duration="18126000" />
-      <workItem from="1618493191014" duration="45309000" />
+      <workItem from="1618493191014" duration="51343000" />
     </task>
     <servers />
   </component>
@@ -211,10 +206,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="333" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618790551617" />
-    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618852653709">
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1619211577095">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1618852653709" />
+    <state x="347" y="60" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1619211577095" />
     <state x="410" y="60" key="FileChooserDialogImpl" timestamp="1618409587003">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

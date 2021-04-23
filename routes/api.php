@@ -31,3 +31,4 @@ Route::group([
 
 Route::resource('/sliders',SliderController::class);
 Route::resource('/references',ReferencesController::class);
+Route::resource('/categories',ReferencesController::class);
