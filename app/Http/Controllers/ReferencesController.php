@@ -55,6 +55,7 @@ class ReferencesController extends Controller
         $validator = Validator::make($request->all(), [
             'image_path' => 'required',
             'name' => 'required',
+            'state' => 'required',
             'service_id' => 'required',
             'category_id' => 'required',
         ]);
@@ -69,6 +70,7 @@ class ReferencesController extends Controller
         $reference->name=$request->input('name');
         $reference->service_id=$request->input('service_id');
         $reference->category_id=$request->input('category_id');
+        $reference->state=$request->input('state');
         $reference->save();
 
         if ($reference == null)
@@ -102,7 +104,7 @@ class ReferencesController extends Controller
         }
         $reference = Reference::Where('id','=',$id)->with('category:id,name','service:id,name')->get();
         return response()->json([
-            'references' => $reference,
+            'reference' => $reference,
         ], 201);
     }
 
@@ -142,12 +144,14 @@ class ReferencesController extends Controller
             'name' => 'required',
             'service_id' => 'required',
             'category_id' => 'required',
+            'state' => 'required',
         ]);
         if ($validator->fails()) {
             return response()->json(
                 $validator->errors(),
                 422);
         }
+
         if($request->image_path){
             Storage::delete($reference->image_path);
             $reference->image_path=$request->file('image_path')->store('references');
@@ -155,6 +159,7 @@ class ReferencesController extends Controller
         $reference->name=$request->input('name');
         $reference->service_id=$request->input('service_id');
         $reference->category_id=$request->input('category_id');
+        $reference->state=$request->input('state');
         $reference->save();
 
         return response()->json([
