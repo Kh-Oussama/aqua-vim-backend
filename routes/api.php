@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductCategoryController;
+use App\Http\Controllers\ProductsSubcategoryController;
 use App\Http\Controllers\ReferencesController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Http\Request;
@@ -33,3 +34,4 @@ Route::group([
 Route::resource('/sliders',SliderController::class);
 Route::resource('/references',ReferencesController::class);
 Route::resource('/categories',ProductCategoryController::class);
+Route::resource('/subcategories',ProductsSubcategoryController::class);

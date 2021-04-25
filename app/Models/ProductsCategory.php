@@ -24,4 +24,9 @@ class ProductsCategory extends Model
     public function getUpdatedAtAttribute($updated_at){
         return Carbon::parse($updated_at)->diffForHumans();
     }
+
+    public function productsSubcategories() {
+        return $this->hasMany('App\Models\ProductsSubcategory','productsCategory_id');
+
+    }
 }
