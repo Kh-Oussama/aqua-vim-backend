@@ -141,7 +141,6 @@ class ProductCategoryController extends Controller
         }
 
         $validator = Validator::make($request->all(), [
-            'image_path' => 'required',
             'title' => 'required',
             'subtitle' => 'required',
             'description' => 'required',
@@ -158,7 +157,6 @@ class ProductCategoryController extends Controller
             $ProductsCategory->image_path=$request->file('image_path')->store('products-categories');
         }
 
-        $ProductsCategory = new ProductsCategory();
         $ProductsCategory->title=$request->input('title');
         $ProductsCategory->subtitle=$request->input('subtitle');
         $ProductsCategory->description=$request->input('description');

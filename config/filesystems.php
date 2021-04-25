@@ -68,6 +68,7 @@ return [
     'links' => [
         public_path('sliders') => storage_path('app/sliders'),
         public_path('references') => storage_path('app/references'),
+        public_path('products-categories') => storage_path('app/products-categories'),
     ],
 
 ];
