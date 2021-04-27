@@ -59,6 +59,13 @@ class ProductsSubcategoryController extends Controller
                 422);
         }
 
+
+        try {
+            $category = ProductsCategory::findOrFail($request->input('productsCategory_id'));
+        } catch (ModelNotFoundException $e) {
+            return response()->json(['error' => 'la catégorie n\'existe pas'], 422);
+        }
+
         $ProductsSubcategory = new ProductsSubcategory();
         $ProductsSubcategory->image_path=$request->file('image_path')->store('products-subcategories');
         $ProductsSubcategory->title=$request->input('title');
@@ -144,15 +151,13 @@ class ProductsSubcategoryController extends Controller
         }
 
         try {
-            $ProductsSubcategory = ProductsCategory::findOrFail($id);
+            $ProductsSubcategory = ProductsSubcategory::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json(['sliderNotFound' => 'la category n\'existe pas'], 422);
         }
 
         $validator = Validator::make($request->all(), [
-            'image_path' => 'required',
             'title' => 'required',
-            'productsCategory_id' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -167,7 +172,6 @@ class ProductsSubcategoryController extends Controller
         }
 
         $ProductsSubcategory->title=$request->input('title');
-        $ProductsSubcategory->productsCategory_id=$request->input('productsCategory_id');
         $ProductsSubcategory->save();
 
         return response()->json([
@@ -191,7 +195,7 @@ class ProductsSubcategoryController extends Controller
         }
 
         try {
-            $ProductsSubcategory = ProductsCategory::findOrFail($id);
+            $ProductsSubcategory = ProductsSubcategory::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => 'la subcategory n\'existe pas'], 422);
         }
