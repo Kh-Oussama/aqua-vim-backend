@@ -25,8 +25,9 @@ class CreateProductsTable extends Migration
             $table->text('engine_description');
             $table->text('pump_description');
             $table->text('voltage_description');
+            $table->string('image_path');
             $table->integer('productsSubcategory_id');
-            $table->integer('pdf_path');
+            $table->string('pdf_path');
             $table->timestamps();
         });
     }

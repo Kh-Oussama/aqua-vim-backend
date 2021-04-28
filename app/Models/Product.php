@@ -9,7 +9,31 @@ class Product extends Model
 {
     use HasFactory;
 
-        public function productsSubcategory() {
+    protected $fillable = [
+        'type',
+        'description',
+        'mark_id',
+        'debit_max',
+        'hmt_max',
+        'power',
+        'liquid_temperature',
+        'engine_description',
+        'pump_description',
+        'voltage_description',
+        'productsSubcategory_id',
+        'pdf_path',
+        'image_path',
+    ];
+
+        public function productSubcategory() {
         return $this->belongsTo('App\Models\ProductsSubcategory');
     }
+
+    public function images() {
+        return $this->hasMany('App\Models\ProductsImages','product_id');
+
+    }
+
+
+
 }
