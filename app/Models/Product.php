@@ -29,6 +29,10 @@ class Product extends Model
         return $this->belongsTo('App\Models\ProductsSubcategory');
     }
 
+    public function mark() {
+        return $this->belongsTo('App\Models\Mark','mark_id');
+    }
+
     public function images() {
         return $this->hasMany('App\Models\ProductsImages','product_id');
 
