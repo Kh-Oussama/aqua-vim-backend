@@ -16,8 +16,8 @@ class ProductsSubcategory extends Model
         'image_path'
     ];
 
-    public function productsCategory() {
-        return $this->belongsTo('App\Models\ProductsCategory');
+    public function category() {
+        return $this->belongsTo('App\Models\ProductsCategory','productsCategory_id');
     }
 
     public function products() {

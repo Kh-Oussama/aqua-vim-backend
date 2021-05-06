@@ -19,11 +19,7 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
+
         $categories = ProductsCategory::all();
         return response()->json([
             'categories' => $categories,
@@ -90,11 +86,6 @@ class ProductCategoryController extends Controller
      */
     public function show($id)
     {
-        try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
 
         try {
             $ProductsCategory = ProductsCategory::findOrFail($id);

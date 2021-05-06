@@ -18,11 +18,7 @@ class ReferencesController extends Controller
      */
     public function index()
     {
-        try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
+
         $references = Reference::with('category:id,name','service:id,name')->get();
         return response()->json([
             'references' => $references,

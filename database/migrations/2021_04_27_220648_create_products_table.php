@@ -27,6 +27,7 @@ class CreateProductsTable extends Migration
             $table->text('voltage_description');
             $table->string('image_path');
             $table->integer('productsSubcategory_id');
+            $table->integer('productsCategory_id');
             $table->string('pdf_path');
             $table->timestamps();
         });

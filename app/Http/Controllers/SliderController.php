@@ -20,12 +20,7 @@ class SliderController extends Controller
      */
     public function index()
     {
-//        sleep(5200);
-        try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
+
         $sliders = slider::all();
         return response()->json([
             'sliders' => $sliders,

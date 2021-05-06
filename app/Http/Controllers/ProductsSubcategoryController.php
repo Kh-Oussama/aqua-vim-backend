@@ -92,16 +92,11 @@ class ProductsSubcategoryController extends Controller
     public function show($id)
     {
         try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
-
-        try {
             $ProductsSubcategory = ProductsSubcategory::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => 'la Subcatégorie n\'existe pas'], 422);
         }
+        $ProductsSubcategory = ProductsSubcategory::Where('id', '=', $id)->with('category:id,title')->get();
 
         return response()->json([
             'productsCategory' => $ProductsSubcategory,
@@ -116,11 +111,6 @@ class ProductsSubcategoryController extends Controller
      */
     public function edit($id)
     {
-        try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
 
         try {
             $category = ProductsCategory::findOrFail($id);

@@ -66,7 +66,6 @@ class ProductsController extends Controller
             'image_path' => 'required',
             'first_image_path' => 'required',
             'second_image_path' => 'required',
-            'third_image_path' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -75,11 +74,8 @@ class ProductsController extends Controller
                 422);
         }
 
-
-
-
         try {
-            $category = ProductsSubcategory::findOrFail($request->input('productsSubcategory_id'));
+            $subcategory = ProductsSubcategory::findOrFail($request->input('productsSubcategory_id'));
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => 'la catégorie n\'existe pas'], 422);
         }
@@ -99,6 +95,7 @@ class ProductsController extends Controller
         $Product->pump_description = $request->input('pump_description');
         $Product->voltage_description = $request->input('voltage_description');
         $Product->productsSubcategory_id = $request->input('productsSubcategory_id');
+        $Product->productsCategory_id = $subcategory->productsCategory_id;
         $Product->save();
 
         $img1 = new ProductsImages();
@@ -110,11 +107,6 @@ class ProductsController extends Controller
         $img2->image_path = $request->file('second_image_path')->store('products');
         $img2->product_id = $Product->id;
         $img2->save();
-
-        $img3 = new ProductsImages();
-        $img3->image_path = $request->file('third_image_path')->store('products');
-        $img3->product_id = $Product->id;
-        $img3->save();
 
         if ($Product == null)
             return response()->json([
@@ -136,17 +128,11 @@ class ProductsController extends Controller
     public function show($id)
     {
         try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
-
-        try {
             $product = Product::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json(['error' => 'le Produit n\'existe pas'], 422);
         }
-        $product = Product::Where('id', '=', $id)->with('images:product_id,image_path','mark:id,name')->get();
+        $product = Product::Where('id', '=', $id)->with('images:product_id,image_path','mark:id,name','category:id,title','subcategory:id,title')->get();
 
         return response()->json([
             'product' => $product,
@@ -162,18 +148,12 @@ class ProductsController extends Controller
     public function edit($id)
     {
         try {
-            $user = auth()->userOrFail();
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 401);
-        }
-
-        try {
             $subcategory = ProductsSubcategory::findOrFail($id);
         } catch (ModelNotFoundException $e) {
             return response()->json(['ProductsCategoryNotFound' => 'la Category n\'existe pas'], 422);
         }
 
-        $products = Product::Where('productsSubcategory_id', '=', 1)->with('images:product_id,image_path','mark:id,name')->get();
+        $products = Product::Where('productsSubcategory_id', '=', $id)->with('images:product_id,image_path','mark:id,name')->get();
 
         return response()->json([
             'products' => $products,

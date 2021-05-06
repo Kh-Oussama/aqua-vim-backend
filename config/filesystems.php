@@ -66,10 +66,12 @@ return [
     */
 
     'links' => [
-//        public_path('sliders') => storage_path('app/sliders'),
-//        public_path('references') => storage_path('app/references'),
-//        public_path('products-categories') => storage_path('app/products-categories'),
+        public_path('sliders') => storage_path('app/sliders'),
+        public_path('references') => storage_path('app/references'),
+        public_path('products-categories') => storage_path('app/products-categories'),
         public_path('products-subcategories') => storage_path('app/products-subcategories'),
+        public_path('products') => storage_path('app/products'),
+        public_path('products-pdf') => storage_path('app/products-pdf'),
     ],
 
 ];
