@@ -19,11 +19,17 @@ class ProductsController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return JsonResponse
      */
     public function index()
     {
-        //
+
+
+        $products = Product::with('images:product_id,image_path','mark:id,name','category:id,title','subcategory:id,title')->get();
+
+        return response()->json([
+            'products' => $products,
+        ]);
     }
 
     /**

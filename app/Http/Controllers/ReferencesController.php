@@ -18,7 +18,6 @@ class ReferencesController extends Controller
      */
     public function index()
     {
-
         $references = Reference::with('category:id,name','service:id,name')->get();
         return response()->json([
             'references' => $references,
