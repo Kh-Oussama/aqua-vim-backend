@@ -48,6 +48,11 @@ class ClientsController extends Controller
                 422);
         }
 
+        $check_client = Client::Where('email',$request->input('email'))->first();;
+        if ($check_client !== null)
+            return response()->json([
+                'client' => "le client exist deja",
+            ], 422);
 
         $Client = new Client();
         $Client->email=$request->input('email');
