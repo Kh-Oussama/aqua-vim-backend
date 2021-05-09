@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\slider;
+
+use App\Models\Slider;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class SliderController extends Controller
     public function index()
     {
 
-        $sliders = slider::all();
+        $sliders = Slider::all();
         return response()->json([
             'sliders' => $sliders,
         ]);
