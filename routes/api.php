@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientsController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\ProductsController;
@@ -41,3 +42,4 @@ Route::resource('/subcategories',ProductsSubcategoryController::class);
 Route::resource('/products',ProductsController::class);
 Route::resource('/clients',ClientsController::class);
 Route::resource('/messages',MessageController::class);
+Route::resource('/events',EventController::class);
