@@ -77,6 +77,7 @@ class MessageController extends Controller
 //            $mail->addBCC('bcc@example.com');
 
             //Attachments
+//            $mail->AddStringEmbeddedImage(file_get_contents('https://www.admin.aqua-vim.com/co.png'),'profile_pic','co.jpg');
 //            $mail->addAttachment('aqua.png');        //Add attachments
 //            $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
             $email = $request->input('email');

@@ -72,6 +72,7 @@ return [
         public_path('products-subcategories') => storage_path('app/products-subcategories'),
         public_path('products') => storage_path('app/products'),
         public_path('products-pdf') => storage_path('app/products-pdf'),
+        public_path('marks') => storage_path('app/marks'),
     ],
 
 ];

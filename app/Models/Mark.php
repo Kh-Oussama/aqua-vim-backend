@@ -11,5 +11,6 @@ class Mark extends Model
 
     protected $fillable = [
         'name',
+        'image_path',
     ];
 }
